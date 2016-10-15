@@ -1,0 +1,133 @@
+
+
+.button {
+  @include button;
+  padding: $button-v-pad $button-h-pad;
+}
+
+.button-small {
+  @include button;
+  padding: $button-small-v-pad $button-small-h-pad;
+}
+
+.button-large {
+  @include button;
+  padding: $button-large-v-pad $button-large-h-pad;
+}
+
+@each $colour-name, $colour in $colours {
+
+  .btn-#{$colour-name} {
+
+    color:$white;
+    background: nth($colour, 1);
+    border: pxToRem(1px) solid nth($colour, 3);
+    &:hover {
+      background: nth($colour, 3);
+    }
+    &:active, &.active {
+      background: nth($colour, 3);
+      @include box-shadow(inset 1px 0px 10px 0px darken(nth($colour, 3),10%));
+    }
+  }
+
+}
+
+
+input, select, textarea, datalist, keygen, output, optgroup, option, label, legend, button {
+  position: relative;
+  font-family: $font-stack-default;
+  vertical-align: middle;
+  @include adjust-font-size-to($h6-fz);
+}
+
+button,
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+
+  -webkit-appearance: button; /* for input */
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  //@include button;
+  //padding: $button-small-v-pad $button-small-h-pad;
+
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"]
+{
+  outline: none !important;
+  border: pxToRem(1px) solid $grey-s4;
+  padding: $button-small-v-pad $pad-xsm; // same padding as small button
+  height: $button-small-height;
+  @include box-sizing(border-box);
+  -webkit-appearance: none;
+  appearance:none;
+  -moz-appearance:none;
+  border-radius: 0;
+  -webkit-border-radius:0;
+  @include adjust-font-size-to($h6-fz,1);
+}
+
+select {
+  outline: none !important;
+  border: pxToRem(1px) solid $grey-s4;
+  padding: 0 $pad-xsm;
+  height: $button-small-height;
+  @include box-sizing(border-box);
+  background: white;
+  @include border-radius(0);  // remove border-radius in iOS
+}
+
+
+
+.table {
+  display: table;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+
+  &.fixed {
+    table-layout: fixed;
+  }
+
+  .vertical-top {
+    vertical-align: top !important;
+  }
+
+  .vertical-bottom {
+    vertical-align: bottom !important;
+  }
+
+  .vertical-middle {
+    vertical-align: middle !important;
+  }
+
+  .row {
+    display: table-row;
+    padding: 0;
+  }
+
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}

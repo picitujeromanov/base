@@ -1,0 +1,33 @@
+
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+
+$base-font-size: 14px;
+$base-line-height: 18px;
+$font-stack-default: 'Open Sans', 'Arial', sans-serif;
+$font-stack-serif: 'Georgia', 'Times', 'Times New Roman', serif;
+
+$min-width: 320px; // minimum width for layout
+$default-border-radius:3px;
+
+$h1-fz: 26px;
+$h2-fz: 22px;
+$h3-fz: 19px;
+$h4-fz: 16px;
+$h5-fz: 14px;
+$h6-fz: 13px;
+$h7-fz: 12px;
+$h8-fz: 11px;
+
+$pad: pxToRem(16px);
+$pad-xsm:pxToRem($base-font-size*0.33);
+$pad-sm: pxToRem($base-font-size*0.66);
+$pad-bg: pxToRem($base-font-size*1.33);
+$pad-xbg: pxToRem($base-font-size*1.66);
+
+$paddings: 0 0,n $pad,xsm $pad-xsm, sm $pad-sm, bg $pad-bg, xbg $pad-xbg;
+
+$transition-speed:0.5s;
+$menu-speed:0.25s;
+$menu-opacity:0.9;
+

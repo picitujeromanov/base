@@ -1,0 +1,30 @@
+
+
+/*
+    Helper functions
+*/
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function pxToRem($px) {
+  @return ($px / $base-font-size)*1rem;
+}
+
+@function mediaPxToRem($px) {
+  //@return ($px / $media-query-font-size)*1rem;
+  @return $px; // safari uses 14px instead of 16px like EVERYONE else, so it fucked up breakpoints on macs
+}
+
+@function pxToRemScale($px, $percent) {
+  @return (($px / $base-font-size) / 100 * $percent)*1rem;
+}
+
+@function pxToEm($px, $font-size) {
+  @return ($px / $font-size)*1em;
+}
+
+@function pxToEmScale($px, $font-size, $percent) {
+  @return (($px / $font-size) / 100 * $percent)*1em;
+}

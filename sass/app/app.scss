@@ -1,0 +1,6 @@
+@import "../base/import";
+
+html, body {
+  @include box-sizing(border-box);
+}
+
