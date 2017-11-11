@@ -1,10 +1,10 @@
 @each $colour-name, $colour in $colours {
 
-  .text-#{$colour-name} {
+  .text-c-#{$colour-name} {
     color: nth($colour, 1) !important;
   }
 
-  .link-#{$colour-name} {
+  .link-c-#{$colour-name} {
     color: nth($colour, 1) !important;
     &:hover {
       color: nth($colour, 3) !important;
@@ -18,7 +18,7 @@
     }
   }
 
-  .bg-#{$colour-name} {
+  .bg-c-#{$colour-name} {
     background: nth($colour, 1);
   }
 

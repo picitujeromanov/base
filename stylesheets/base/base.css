@@ -80,7 +80,7 @@ html {
   line-height: 1.28571em;
 }
 
-/* line 22, ../../sass/base/base.scss */
+/* line 21, ../../sass/base/base.scss */
 html, body {
   position: relative;
   height: 100%;
@@ -91,7 +91,7 @@ html, body {
   -webkit-text-size-adjust: none;
 }
 
-/* line 32, ../../sass/base/base.scss */
+/* line 31, ../../sass/base/base.scss */
 html {
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -99,12 +99,12 @@ html {
   /* 2 */
 }
 
-/* line 38, ../../sass/base/base.scss */
+/* line 37, ../../sass/base/base.scss */
 a[href], button {
   touch-action: manipulation;
 }
 
-/* line 40, ../../sass/base/base.scss */
+/* line 39, ../../sass/base/base.scss */
 body {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
@@ -116,7 +116,7 @@ body {
   line-height: 1.67143rem;
 }
 
-/* line 48, ../../sass/base/base.scss */
+/* line 47, ../../sass/base/base.scss */
 input,
 textarea,
 button,
@@ -126,16 +126,16 @@ a {
 }
 
 /* line 3, ../../sass/base/modules/common/_common.scss */
-.text-primary {
+.text-c-primary {
   color: #ed165c !important;
 }
 
 /* line 7, ../../sass/base/modules/common/_common.scss */
-.link-primary {
+.link-c-primary {
   color: #ed165c !important;
 }
 /* line 9, ../../sass/base/modules/common/_common.scss */
-.link-primary:hover {
+.link-c-primary:hover {
   color: #ed165c !important;
 }
 
@@ -149,21 +149,21 @@ a {
 }
 
 /* line 21, ../../sass/base/modules/common/_common.scss */
-.bg-primary {
+.bg-c-primary {
   background: #ed165c;
 }
 
 /* line 3, ../../sass/base/modules/common/_common.scss */
-.text-success {
+.text-c-success {
   color: #49BC1F !important;
 }
 
 /* line 7, ../../sass/base/modules/common/_common.scss */
-.link-success {
+.link-c-success {
   color: #49BC1F !important;
 }
 /* line 9, ../../sass/base/modules/common/_common.scss */
-.link-success:hover {
+.link-c-success:hover {
   color: #2FA205 !important;
 }
 
@@ -177,21 +177,21 @@ a {
 }
 
 /* line 21, ../../sass/base/modules/common/_common.scss */
-.bg-success {
+.bg-c-success {
   background: #49BC1F;
 }
 
 /* line 3, ../../sass/base/modules/common/_common.scss */
-.text-info {
+.text-c-info {
   color: #0088CC !important;
 }
 
 /* line 7, ../../sass/base/modules/common/_common.scss */
-.link-info {
+.link-c-info {
   color: #0088CC !important;
 }
 /* line 9, ../../sass/base/modules/common/_common.scss */
-.link-info:hover {
+.link-c-info:hover {
   color: #1771A6 !important;
 }
 
@@ -205,21 +205,21 @@ a {
 }
 
 /* line 21, ../../sass/base/modules/common/_common.scss */
-.bg-info {
+.bg-c-info {
   background: #0088CC;
 }
 
 /* line 3, ../../sass/base/modules/common/_common.scss */
-.text-warning {
+.text-c-warning {
   color: #ffb80c !important;
 }
 
 /* line 7, ../../sass/base/modules/common/_common.scss */
-.link-warning {
+.link-c-warning {
   color: #ffb80c !important;
 }
 /* line 9, ../../sass/base/modules/common/_common.scss */
-.link-warning:hover {
+.link-c-warning:hover {
   color: #fab514 !important;
 }
 
@@ -233,21 +233,21 @@ a {
 }
 
 /* line 21, ../../sass/base/modules/common/_common.scss */
-.bg-warning {
+.bg-c-warning {
   background: #ffb80c;
 }
 
 /* line 3, ../../sass/base/modules/common/_common.scss */
-.text-danger {
+.text-c-danger {
   color: #FC584F !important;
 }
 
 /* line 7, ../../sass/base/modules/common/_common.scss */
-.link-danger {
+.link-c-danger {
   color: #FC584F !important;
 }
 /* line 9, ../../sass/base/modules/common/_common.scss */
-.link-danger:hover {
+.link-c-danger:hover {
   color: #FA1104 !important;
 }
 
@@ -261,21 +261,21 @@ a {
 }
 
 /* line 21, ../../sass/base/modules/common/_common.scss */
-.bg-danger {
+.bg-c-danger {
   background: #FC584F;
 }
 
 /* line 3, ../../sass/base/modules/common/_common.scss */
-.text-disabled {
+.text-c-disabled {
   color: #c3c4c6 !important;
 }
 
 /* line 7, ../../sass/base/modules/common/_common.scss */
-.link-disabled {
+.link-c-disabled {
   color: #c3c4c6 !important;
 }
 /* line 9, ../../sass/base/modules/common/_common.scss */
-.link-disabled:hover {
+.link-c-disabled:hover {
   color: #c3c4c6 !important;
 }
 
@@ -289,21 +289,21 @@ a {
 }
 
 /* line 21, ../../sass/base/modules/common/_common.scss */
-.bg-disabled {
+.bg-c-disabled {
   background: #c3c4c6;
 }
 
 /* line 3, ../../sass/base/modules/common/_common.scss */
-.text-white {
+.text-c-white {
   color: #ffffff !important;
 }
 
 /* line 7, ../../sass/base/modules/common/_common.scss */
-.link-white {
+.link-c-white {
   color: #ffffff !important;
 }
 /* line 9, ../../sass/base/modules/common/_common.scss */
-.link-white:hover {
+.link-c-white:hover {
   color: #ffffff !important;
 }
 
@@ -317,21 +317,21 @@ a {
 }
 
 /* line 21, ../../sass/base/modules/common/_common.scss */
-.bg-white {
+.bg-c-white {
   background: #ffffff;
 }
 
 /* line 3, ../../sass/base/modules/common/_common.scss */
-.text-black {
+.text-c-black {
   color: #333132 !important;
 }
 
 /* line 7, ../../sass/base/modules/common/_common.scss */
-.link-black {
+.link-c-black {
   color: #333132 !important;
 }
 /* line 9, ../../sass/base/modules/common/_common.scss */
-.link-black:hover {
+.link-c-black:hover {
   color: #333132 !important;
 }
 
@@ -345,7 +345,7 @@ a {
 }
 
 /* line 21, ../../sass/base/modules/common/_common.scss */
-.bg-black {
+.bg-c-black {
   background: #333132;
 }
 
