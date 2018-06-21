@@ -1,0 +1,43 @@
+@mixin vertical-center {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin vertical-horizontal-center {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin horizontal-center-margin {
+  position: relative;
+  margin:0 auto;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+@mixin adjust-font-size-to($fontSize) {
+  font-size: pxToRem($fontSize);
+  line-height: pxToRem((ceil($fontSize / $base-line-height) * $base-line-height));
+}
+
+@mixin adjust-margin-size-to($fontSize) {
+  margin-top: pxToRem($base-line-height * 0.5);
+  margin-bottom: pxToRem($base-line-height);
+}

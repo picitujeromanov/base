@@ -1,0 +1,38 @@
+
+$button-v-pad: $pad-sm * 0.5;
+$button-h-pad: ($pad* 0.5) * 1.5;
+$button-height: 2*$button-v-pad + pxToRem($base-line-height) + pxToRem(2px);
+
+$button-small-v-pad: $pad-sm * 0.33;
+$button-small-h-pad: ($pad * 0.33) * 1.5;
+$button-small-height: 2*$button-small-v-pad + pxToRem($base-line-height) + pxToRem(2px);
+
+$button-large-v-pad: $pad-sm ;
+$button-large-h-pad: $pad * 1.5;
+$button-large-height: 2*$button-large-v-pad + pxToRem($base-line-height) + pxToRem(2px);
+
+
+@mixin button {
+  position: relative;
+  text-align: center;
+  border-radius: pxToRem(3px);
+  @include adjust-font-size-to($h6-fz);
+  text-decoration: none;
+  display: inline-block;
+  min-width: 14px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border: pxToRem(1px) solid rgba(0,0,0,0);
+  margin: 0;
+  &:hover {
+    text-decoration: none;
+  }
+}

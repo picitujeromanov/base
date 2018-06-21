@@ -1,0 +1,186 @@
+
+$menu-opacity:0.9;
+//popup menu styling
+
+@mixin popup-menu($top, $direction, $caretPosition) {
+  outline: none;
+  position: absolute;
+  top: $top + $pad;
+  background: rgba($black, $menu-opacity);
+  border-radius: pxToRem(3px);
+  color: $white;
+  @include adjust-font-size-to($h6-fz);
+  font-weight: 400;
+  z-index: 20;
+
+  @if $direction == "left"
+  {
+    left:0;
+    text-align: left;
+  }
+  @else
+  {
+    right:0;
+    text-align: right;
+  }
+
+  hr {
+    position: relative;
+    display: block;
+    height: pxToRem(1px);
+    background: lighten($black, 20%);
+    border: 0;
+    margin: $pad-xsm;
+  }
+
+
+  &:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: $black;
+    opacity: $menu-opacity;
+    border-width: $pad-sm;
+  }
+
+  @if $direction == "left"
+  {
+    &:after {
+      margin-right: $pad-sm * -1;
+      left: $caretPosition - pxToRem(1px);
+    }
+
+  }
+  @else
+  {
+    &:after {
+      margin-left: $pad-sm * -1;
+      right: $caretPosition + pxToRem(1px);
+    }
+  }
+
+  ul {
+    position: relative;
+    padding: 0;
+
+
+    li {
+      position: relative;
+      display: block;
+      white-space: nowrap;
+      word-break: keep-all;
+      cursor: pointer;
+      border-radius: pxToRem(3px);
+      color: $grey-s4;
+
+      a, span {
+        display: block;
+        color: $grey-s4;
+        padding: $pad-sm;
+      }
+
+      &.selected {
+        color: $white;
+      }
+
+      &:hover {
+        background: rgba($black, 1) !important;
+        color:$white;
+        a {
+          color:$white;
+          text-decoration: none;
+        }
+      }
+      i {
+        @if $direction == "left"
+        {
+          margin-right: $pad-xsm;
+        }
+        @else
+        {
+          margin-left: $pad-xsm;
+        }
+      }
+    }
+  }
+
+  .active li {
+    @if $direction == "left"
+    {
+      padding-left: $pad;
+    }
+    @else
+    {
+      padding-right: $pad;
+    }
+  }
+
+}
+
+@mixin popup-menu-position($top, $direction, $caretPosition) {
+  top: $top + $pad-sm + pxToRem(2px) !important;
+  @if $direction == "left"
+  {
+    left:0 !important;
+    right: auto !important;
+    text-align: left !important;
+
+
+    &:after {
+      margin-right: $pad-sm * -1;
+      margin-left: auto;
+      left: $caretPosition - pxToRem(1px);
+      right: auto;
+    }
+
+
+  }
+  @else
+  {
+    right:0 !important;
+    left: auto !important;
+    text-align: right !important;
+
+
+    &:after {
+      margin-left: $pad-sm * -1;
+      margin-right: auto;
+      right: $caretPosition + pxToRem(1px);
+      left: auto;
+    }
+
+  }
+
+  ul {
+    li {
+      i {
+        @if $direction == "left"
+        {
+          margin-right: $pad-xsm;
+          margin-left: auto;
+        }
+        @else
+        {
+          margin-left: $pad-xsm;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .active li {
+    @if $direction == "left"
+    {
+      padding-left: $pad;
+    }
+    @else
+    {
+      padding-right: $pad;
+    }
+  }
+
+}

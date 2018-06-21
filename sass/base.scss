@@ -1,0 +1,58 @@
+
+@import "settings/functions";
+@import 'settings/variables';
+@import 'settings/breakpoints';
+@import 'settings/colours';
+
+@import 'modules/common/common-mixins';
+@import 'modules/form/form-mixins';
+@import 'modules/popup-menu/popup-mixins';
+@import 'modules/reset';
+
+html, body {
+  position: relative;
+  min-height: 100%;
+  touch-action:none;
+  -ms-touch-action: none;
+  -ms-scroll-chaining: none;
+  -ms-overflow-style: none;
+  -webkit-text-size-adjust:none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+//MS tap delay fix
+a[href], button { touch-action: manipulation; }
+
+html {
+  font-size: $base-font-size; // setting base font size for REM units
+}
+
+body {
+  font-family: $font-stack-default;
+  font-weight: 400;
+  font-style: normal;
+  color: $black;
+  line-height: $base-line-height;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@import 'modules/grid';
+@import 'modules/common/common';
+@import 'modules/form/form';
+@import 'modules/modal';
+
+//USER DEFINED
+@import 'app/layout';

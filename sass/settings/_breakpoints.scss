@@ -1,0 +1,48 @@
+
+$mq-b-points: (
+  s:'(min-width: 375px)', // iphone 6 and bigger (374 maybe? )
+  m:'(min-width: 555px)',
+  l:'(min-width: 735px)',
+  xl:'(min-width: 1035px)',
+  xxl:'(min-width: 1270px)',
+  xxxl:'(min-width: 1470px)',
+  retina: '(-webkit-min-device-pixel-ratio: 1.5),
+                      (min--moz-device-pixel-ratio: 1.5),
+                      (-o-min-device-pixel-ratio: 3/2),
+                      (min-resolution: 1.5dppx)'
+);
+
+
+$js-b-points: (
+  s:'[min-width~="#{pxToRem(375px)}"]',
+  m:'[min-width~="#{pxToRem(555px)}"]',
+  l:'[min-width~="#{pxToRem(735px)}"]',
+  xl:'[min-width~="#{pxToRem(1035px)}"]',
+  xxl:'[min-width~="#{pxToRem(1270px)}"]',
+  xxxl:'[min-width~="#{pxToRem(1470px)}"]'
+);
+
+
+@mixin respond-to($point) {
+  @if map-has-key($mq-b-points, $point) {
+    @media #{unquote(map-get($mq-b-points, $point))} { @content };
+
+  }
+  @else {
+    @warn "Your `#{$point}`. doesnt exist"
+        + "Please make sure it is defined in `$mq-b-points` map.";
+  }
+}
+
+// responsive points for responsive columns, sizes should be the same
+
+@mixin js-respond-to($point) {
+  @if map-has-key($js-b-points, $point) {
+    .js-breakpoint#{unquote(map-get($js-b-points, $point))} { @content };
+
+  }
+  @else {
+    @warn "Your `#{$point}`. doesnt exist"
+        + "Please make sure it is defined in `$js-b-points` map.";
+  }
+}

@@ -1,0 +1,54 @@
+/* COLOURS START */
+
+$white: #ffffff;
+$default-color: #000000;
+
+/*
+
+  color,
+  color_dark,
+  color_light
+
+*/
+
+$primary:#333132;
+$primary_d:#000000;
+$primary_l:#454346;
+
+$info: #0088CC;
+$info_d:darken($info, 5);
+$info_l:lighten($info, 5);
+
+$danger:#ED1A35;
+$danger_d:darken($danger, 5);
+$danger_l:lighten($danger, 5);
+
+$success:#00B966;
+$success_d:darken($success, 5);
+$success_l:lighten($success, 5);
+
+$warning:#EEC714;
+$warning_d:darken($warning, 5);
+$warning_l:lighten($warning, 5);
+
+$grey-s1: #fafafa;
+$grey-s2: #f3f3f3;
+$grey-s3:#e4e4e4;
+$grey-s4: #c3c4c6;
+$grey-s5: #454346;
+$black: #333132;
+$true-black: #000000;
+
+//normal, hover, active, border, text
+
+$brand-primary: ($primary $primary_l $primary_d $primary_d $white);
+$brand-success:  ($success $success_d $success_l $success_d $white);
+$brand-info:($info $info_d $info_l $info_d $white);
+$brand-warning:($warning $warning_d $warning_l $warning_d $white);
+$brand-danger:($danger $danger_d $danger_l $danger_d $white);
+$brand-disabled:($grey-s4 $grey-s4 $grey-s4 $grey-s4 $white);
+
+$brand-white:($white $grey-s1 $white $grey-s4 $black);
+$brand-black:($black $black $black $black $white);
+
+$colours: primary $brand-primary, success $brand-success, info $brand-info, warning $brand-warning, danger $brand-danger, disabled $brand-disabled, white $brand-white, black $brand-black;

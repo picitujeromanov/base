@@ -1,0 +1,37 @@
+$base-font-size: 14px;
+$base-line-height: 24px;
+$font-stack-default: 'Nunito', 'Avenir', Helvetica, Arial, sans-serif;
+$font-stack-serif: 'Georgia', 'Times', 'Times New Roman', serif;
+
+$min-width: 320px; // minimum width for layout
+
+$h1-fz: 26px;
+$h2-fz: 22px;
+$h3-fz: 19px;
+$h4-fz: 16px;
+$h5-fz: 14px;
+$h6-fz: 12px;
+$small-fz:10px;
+
+
+$pad: pxToRem($base-line-height * 0.6);
+$pad-xsm:pxToRem($base-line-height*0.2);
+$pad-sm: pxToRem($base-line-height*0.4);
+$pad-bg: pxToRem($base-line-height*0.8);
+$pad-xbg: pxToRem($base-line-height*1);
+
+//$pad: pxToRem($base-line-height * 0.45);
+//$pad-xsm:pxToRem($base-line-height*0.15);
+//$pad-sm: pxToRem($base-line-height*0.3);
+//$pad-bg: pxToRem($base-line-height*0.6);
+//$pad-xbg: pxToRem($base-line-height*0.75);
+//
+//$pad: pxToRem($base-line-height * 0.5);
+//$pad-xsm:pxToRem($base-line-height*0.16666);
+//$pad-sm: pxToRem($base-line-height*0.33333);
+//$pad-bg: pxToRem($base-line-height*0.66666);
+//$pad-xbg: pxToRem($base-line-height*1);
+
+$paddings: 0 0,n $pad,xsm $pad-xsm, sm $pad-sm, bg $pad-bg, xbg $pad-xbg;
+
+
