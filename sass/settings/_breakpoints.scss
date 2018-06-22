@@ -1,12 +1,19 @@
+$r_s: 375px;
+$r_m: 555px;
+$r_l: 735px;
+$r_xl: 1035px;
+$r_xxl: 1270px;
+$r_xxxl: 1470px;
+
 
 $mq-b-points: (
-  s:'(min-width: 375px)', // iphone 6 and bigger (374 maybe? )
-  m:'(min-width: 555px)',
-  l:'(min-width: 735px)',
-  xl:'(min-width: 1035px)',
-  xxl:'(min-width: 1270px)',
-  xxxl:'(min-width: 1470px)',
-  retina: '(-webkit-min-device-pixel-ratio: 1.5),
+        s:'(min-width: #{$r_s})', // iphone 6 and bigger (374 maybe? )
+        m:'(min-width: #{$r_m})',
+        l:'(min-width: #{$r_l})',
+        xl:'(min-width: #{$r_xl})',
+        xxl:'(min-width: #{$r_xxl})',
+        xxxl:'(min-width: #{$r_xxxl})',
+        retina: '(-webkit-min-device-pixel-ratio: 1.5),
                       (min--moz-device-pixel-ratio: 1.5),
                       (-o-min-device-pixel-ratio: 3/2),
                       (min-resolution: 1.5dppx)'
@@ -14,13 +21,14 @@ $mq-b-points: (
 
 
 $js-b-points: (
-  s:'[min-width~="#{pxToRem(375px)}"]',
-  m:'[min-width~="#{pxToRem(555px)}"]',
-  l:'[min-width~="#{pxToRem(735px)}"]',
-  xl:'[min-width~="#{pxToRem(1035px)}"]',
-  xxl:'[min-width~="#{pxToRem(1270px)}"]',
-  xxxl:'[min-width~="#{pxToRem(1470px)}"]'
+        s:'[min-width~="#{pxToRem($r_s)}"]',
+        m:'[min-width~="#{pxToRem($r_m)}"]',
+        l:'[min-width~="#{pxToRem($r_l)}"]',
+        xl:'[min-width~="#{pxToRem($r_xl)}"]',
+        xxl:'[min-width~="#{pxToRem($r_xxl)}"]',
+        xxxl:'[min-width~="#{pxToRem($r_xxxl)}"]'
 );
+
 
 
 @mixin respond-to($point) {
