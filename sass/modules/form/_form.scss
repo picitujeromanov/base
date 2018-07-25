@@ -81,7 +81,6 @@ select {
   }
 
 }
-
 button,
 [role="button"],
 input[type="submit"],
@@ -92,8 +91,8 @@ input[type="button"] {
   -webkit-user-select: none; /* for button */
   -moz-user-select: none;
   -ms-user-select: none;
-  background: none;
-  border:0;
+  //background: none;
+  //border:0;
 }
 
 .button {
@@ -115,30 +114,16 @@ input[type="button"] {
 }
 
 @each $colour-name, $colour in $colours {
-
-  button,
-  [role="button"],
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"] {
-    &.btn-#{$colour-name} {
-      color:nth($colour, 5);
-      background: nth($colour, 1);
-      border: pxToRem(1px) solid nth($colour, 4);
-      background: nth($colour, 1);
-    }
-  }
-
   .btn-#{$colour-name} {
     color:nth($colour, 5);
-    background: nth($colour, 1);
+    background-color: nth($colour, 1);
     border: pxToRem(1px) solid nth($colour, 4);
     &:hover {
       color:nth($colour, 5);
-      background: nth($colour, 2);
+      background-color: nth($colour, 2);
     }
     &:active, &.active {
-      background: nth($colour, 3);
+      background-color: nth($colour, 3);
       box-shadow: inset 1px 0px 10px 0px darken(nth($colour, 3),10%);
     }
   }
@@ -146,15 +131,15 @@ input[type="button"] {
 
 [class*="btn-"] {
   &[disabled=disabled] {
-    color:nth($brand-disabled, 5);
-    background: nth($brand-disabled, 1);
-    border: pxToRem(1px) solid nth($brand-disabled, 4);
+    color:nth($colors-disabled, 5);
+    background-color: nth($colors-disabled, 1);
+    border: pxToRem(1px) solid nth($colors-disabled, 4);
     &:hover {
-      background: nth($brand-disabled, 2);
+      background-color: nth($colors-disabled, 2);
     }
     &:active, &.active {
-      background: nth($brand-disabled, 3);
-      box-shadow: inset 1px 0px 10px 0px darken(nth($brand-disabled, 3),10%);
+      background-color: nth($colors-disabled, 3);
+      box-shadow: inset 1px 0px 10px 0px darken(nth($colors-disabled, 3),10%);
     }
   }
 }

@@ -38,17 +38,30 @@ $grey-s4: #c3c4c6;
 $grey-s5: #454346;
 $black: #333132;
 $true-black: #000000;
+$true-white: #ffffff;
 
 //normal, hover, active, border, text
 
 $brand-primary: ($primary $primary_l $primary_d $primary_d $white);
 $brand-success:  ($success $success_d $success_l $success_d $white);
 $brand-info:($info $info_d $info_l $info_d $white);
-$brand-warning:($warning $warning_d $warning_l $warning_d $white);
-$brand-danger:($danger $danger_d $danger_l $danger_d $white);
-$brand-disabled:($grey-s4 $grey-s4 $grey-s4 $grey-s4 $white);
+$colors-info:($info $info_d $info_l $info_d $white);
+$colors-warning:($warning $warning_d $warning_l $warning_d $white);
+$colors-danger:($danger $danger_d $danger_l $danger_d $white);
+$colors-disabled:($grey-s4 $grey-s4 $grey-s4 $grey-s4 $white);
 
-$brand-white:($white $grey-s1 $white $grey-s4 $black);
-$brand-black:($black $black $black $black $white);
+$colors-white:($white $grey-s1 $white $grey-s4 $black);
+$colors-black:($black $black $black $black $white);
+$colors-true-black: ($true-black $true-black $true-black $true-black $true-white);
+$colors-true-white: ($true-white $true-white $true-white $true-white $true-black);
 
-$colours: primary $brand-primary, success $brand-success, info $brand-info, warning $brand-warning, danger $brand-danger, disabled $brand-disabled, white $brand-white, black $brand-black;
+$colours: primary $brand-primary,
+success $brand-success,
+info $colors-info,
+warning $colors-warning,
+danger $colors-danger,
+disabled $colors-disabled,
+white $colors-white,
+black $colors-black,
+true-black $colors-true-black,
+true-white $colors-true-white;
