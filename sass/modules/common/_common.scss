@@ -38,25 +38,25 @@ a, .link {
 h1 {
   @include adjust-font-size-to($h1-fz);
   @include adjust-margin-size-to($h1-fz);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h2 {
   @include adjust-font-size-to($h2-fz);
   @include adjust-margin-size-to($h2-fz);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h3 {
   @include adjust-font-size-to($h3-fz);
   @include adjust-margin-size-to($h3-fz);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h4 {
   @include adjust-font-size-to($h4-fz);
   @include adjust-margin-size-to($h4-fz);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h5{
@@ -169,6 +169,10 @@ strong, .strong, b {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.uncase {
+  text-transform: none;
 }
 
 .capitalize {
@@ -393,5 +397,5 @@ ul, li {
 }
 
 .full-width {
-      width: 100%;
+  width: 100%;
 }
