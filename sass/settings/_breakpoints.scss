@@ -59,3 +59,34 @@ $js-b-points: (
         + "Please make sure it is defined in `$js-b-points` map.";
   }
 }
+
+
+body {
+  &:before {
+    display: none;
+    content: 'default';
+    @include respond-to(s) {
+      content: 's';
+    }
+
+    @include respond-to(m) {
+      content: 'm';
+    }
+
+    @include respond-to(l) {
+      content: 'l';
+    }
+
+    @include respond-to(xl) {
+      content: 'xl';
+    }
+
+    @include respond-to(xxl) {
+      content: 'xxl';
+    }
+
+    @include respond-to(xxxl) {
+      content: 'xxxl';
+    }
+  }
+}

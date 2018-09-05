@@ -1,5 +1,5 @@
 /* eslint-disable */
-import settings from '../../sass/settings/_breakpoints';
+import settings from '../sass/settings/_breakpoints';
 
 const mediaquery = store => {
 
