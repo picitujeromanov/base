@@ -1,7 +1,7 @@
 
 input, select, textarea, datalist, keygen, output, optgroup, option, label, legend, button {
   position: relative;
-  font-family: $font-stack-default;
+  font-family: inherit;
   vertical-align: middle;
   @include adjust-font-size-to($h6-fz);
 
