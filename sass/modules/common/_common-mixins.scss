@@ -37,6 +37,9 @@
   line-height: pxToRem((ceil($fontSize / $base-line-height) * $base-line-height));
 }
 
+//TODO wrong ... margin-top + line-height + margin-bottom = multiple of $base-line-height
+// https://github.com/jakegiltsoff/sassline
+
 @mixin adjust-margin-size-to($fontSize) {
   margin-top: pxToRem($base-line-height * 0.5);
   margin-bottom: pxToRem($base-line-height);
