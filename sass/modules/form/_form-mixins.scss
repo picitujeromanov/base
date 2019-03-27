@@ -1,13 +1,13 @@
 
-$button-v-pad: $pad-sm * 0.5;
-$button-h-pad: ($pad* 0.5) * 1.5;
+$button-v-pad: $pad * 0.33;
+$button-h-pad: $pad * 1;
 $button-height: 2*$button-v-pad + pxToRem($base-line-height) + pxToRem(2px);
 
-$button-small-v-pad: $pad-sm * 0.33;
-$button-small-h-pad: ($pad * 0.33) * 1.5;
+$button-small-v-pad: $pad * 0.25;
+$button-small-h-pad: $pad * 1.25;
 $button-small-height: 2*$button-small-v-pad + pxToRem($base-line-height) + pxToRem(2px);
 
-$button-large-v-pad: $pad-sm ;
+$button-large-v-pad: $pad * 0.5 ;
 $button-large-h-pad: $pad * 1.5;
 $button-large-height: 2*$button-large-v-pad + pxToRem($base-line-height) + pxToRem(2px);
 
