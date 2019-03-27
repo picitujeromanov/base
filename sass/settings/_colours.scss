@@ -15,6 +15,10 @@ $primary:#333132;
 $primary_d:#000000;
 $primary_l:#454346;
 
+$secondary:#d50a0a;
+$secondary_d:darken($secondary, 5);
+$secondary_l:lighten($secondary, 5);
+
 $info: #0088CC;
 $info_d:darken($info, 5);
 $info_l:lighten($info, 5);
@@ -43,6 +47,7 @@ $true-white: #ffffff;
 //normal, hover, active, border, text
 
 $brand-primary: ($primary $primary_l $primary_d $primary_d $white);
+$brand-secondary: ($secondary $secondary_l $secondary_d $secondary_d $white);
 $brand-success:  ($success $success_d $success_l $success_d $white);
 $brand-info:($info $info_d $info_l $info_d $white);
 $colors-info:($info $info_d $info_l $info_d $white);
@@ -56,6 +61,7 @@ $colors-true-black: ($true-black $true-black $true-black $true-black $true-white
 $colors-true-white: ($true-white $true-white $true-white $true-white $true-black);
 
 $colours: primary $brand-primary,
+secondary $brand-secondary,
 success $brand-success,
 info $colors-info,
 warning $colors-warning,
