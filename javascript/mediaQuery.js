@@ -1,5 +1,5 @@
 /* eslint-disable */
-import settings from '../sass/settings/_breakpoints';
+import settings from '../../sass/settings/_breakpoints';
 
 const mediaquery = store => {
 
@@ -12,19 +12,15 @@ const mediaquery = store => {
     {
         settings.forEach(media => {
             let md = window.matchMedia(media.query);
-            console.log(media.query);
-            md.addListener(function (mql) {
-
-                console.log(mql);
-
-                if(mql.type === 'change') {
-                    store.commit('setBreakpoint', matchCurrent().name || 'default');
-                }
-            });
-            if(md.matches) {
-                store.commit('setBreakpoint', media.name);
+        md.addListener(function (mql) {
+            if(mql.type === 'change') {
+                store.commit('setBreakpoint', matchCurrent().name || 'default');
             }
         });
+        if(md.matches) {
+            store.commit('setBreakpoint', media.name);
+        }
+    });
     }
 };
 

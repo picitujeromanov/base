@@ -19,7 +19,12 @@ $secondary:#d50a0a;
 $secondary_d:darken($secondary, 5);
 $secondary_l:lighten($secondary, 5);
 
-$info: #0088CC;
+$tertiary:#FFEC52;
+$tertiary_d:darken($tertiary, 5);
+$tertiary_l:lighten($tertiary, 5);
+
+
+$info: #1D4C82;
 $info_d:darken($info, 5);
 $info_l:lighten($info, 5);
 
@@ -46,28 +51,29 @@ $true-white: #ffffff;
 
 //normal, hover, active, border, text
 
-$brand-primary: ($primary $primary_l $primary_d $primary_d $white);
+$brand-primary: ($primary_d $primary $primary_l $primary_d $white);
 $brand-secondary: ($secondary $secondary_l $secondary_d $secondary_d $white);
+$brand-tertiary: ($tertiary $tertiary_l $tertiary_d $tertiary_d $black);
 $brand-success:  ($success $success_d $success_l $success_d $white);
-$brand-info:($info $info_d $info_l $info_d $white);
 $colors-info:($info $info_d $info_l $info_d $white);
 $colors-warning:($warning $warning_d $warning_l $warning_d $white);
 $colors-danger:($danger $danger_d $danger_l $danger_d $white);
 $colors-disabled:($grey-s4 $grey-s4 $grey-s4 $grey-s4 $white);
 
-$colors-white:($white $grey-s1 $white $grey-s4 $black);
-$colors-black:($black $black $black $black $white);
+$colors-white:($white $grey-s1 $white $primary-d $primary);
+$colors-black:($black $black $black $white $white);
 $colors-true-black: ($true-black $true-black $true-black $true-black $true-white);
 $colors-true-white: ($true-white $true-white $true-white $true-white $true-black);
 
 $colours: primary $brand-primary,
-secondary $brand-secondary,
-success $brand-success,
-info $colors-info,
-warning $colors-warning,
-danger $colors-danger,
-disabled $colors-disabled,
-white $colors-white,
-black $colors-black,
-true-black $colors-true-black,
-true-white $colors-true-white;
+          secondary $brand-secondary,
+          tertiary $brand-tertiary,
+          success $brand-success,
+          info $colors-info,
+          warning $colors-warning,
+          danger $colors-danger,
+          disabled $colors-disabled,
+          white $colors-white,
+          black $colors-black,
+          true-black $colors-true-black,
+          true-white $colors-true-white;

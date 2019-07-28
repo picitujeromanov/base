@@ -41,11 +41,11 @@
 
 .modal-header {
   text-align: left;
-  padding: 0 $pad;
+  padding: 0 $pad+ pxToRem(20px) 0 $pad;
   border-radius: pxToRem(4px) pxToRem(4px) 0 0;
   line-height: pxToRem(40px);
   font-weight: 700;
-  font-size: pxToRem($h4-fz);
+  font-size: pxToRem($h5-fz);
   background: $grey-s5;
   color: $white;
 }
@@ -60,12 +60,17 @@
 
 .modal-default-button {
   position: absolute;
-  right:pxToRem(-10px);
-  top:pxToRem(-10px);
+  right:pxToRem(13px);
+  top:pxToRem(10px);
   font-size: pxToRem(20px);
-  color:$white;
-  text-shadow: 0 0 pxToRem(5px) $black;
+  color: $black;
+  text-shadow: pxToRem(1px) pxToRem(1px) pxToRem(0px) $true-white;
   cursor: pointer;
+
+  &.--with-header {
+    color: $true-white;
+    text-shadow: pxToRem(1px) pxToRem(1px) pxToRem(0px) $black;
+  }
 }
 
 /*

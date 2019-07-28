@@ -3,37 +3,37 @@
 // those must be the same as those in _breakpoints.js
 
 
-$r_s: 375px;
-$r_m: 555px;
-$r_l: 735px;
-$r_xl: 1035px;
-$r_xxl: 1270px;
-$r_xxxl: 1470px;
+$r_xs: 640px;
+$r_s: 768px;
+$r_m: 1024px;
+$r_l: 1200px;
+$r_xl: 1480px;
+$r_xxl: 1900px;
+
 
 
 $mq-b-points: (
-        s:'(min-width: #{$r_s})', // iphone 6 and bigger (374 maybe? )
-        m:'(min-width: #{$r_m})',
-        l:'(min-width: #{$r_l})',
-        xl:'(min-width: #{$r_xl})',
-        xxl:'(min-width: #{$r_xxl})',
-        xxxl:'(min-width: #{$r_xxxl})',
-        retina: '(-webkit-min-device-pixel-ratio: 1.5),
-                      (min--moz-device-pixel-ratio: 1.5),
-                      (-o-min-device-pixel-ratio: 3/2),
-                      (min-resolution: 1.5dppx)'
+  xs:'(min-width: #{$r_xs})', // iphone 6 and bigger (374 maybe? )
+  s:'(min-width: #{$r_s})',
+  m:'(min-width: #{$r_m})',
+  l:'(min-width: #{$r_l})',
+  xl:'(min-width: #{$r_xl})',
+  xxl:'(min-width: #{$r_xxl})',
+  //retina: '(-webkit-min-device-pixel-ratio: 1.5),
+  //                    (min--moz-device-pixel-ratio: 1.5),
+  //                    (-o-min-device-pixel-ratio: 3/2),
+  //                    (min-resolution: 1.5dppx)'
 );
 
 
 $js-b-points: (
-        s:'[min-width~="#{pxToRem($r_s)}"]',
-        m:'[min-width~="#{pxToRem($r_m)}"]',
-        l:'[min-width~="#{pxToRem($r_l)}"]',
-        xl:'[min-width~="#{pxToRem($r_xl)}"]',
-        xxl:'[min-width~="#{pxToRem($r_xxl)}"]',
-        xxxl:'[min-width~="#{pxToRem($r_xxxl)}"]'
+  xs:'[min-width~="#{pxToRem($r_xs)}"]',
+  s:'[min-width~="#{pxToRem($r_s)}"]',
+  m:'[min-width~="#{pxToRem($r_m)}"]',
+  l:'[min-width~="#{pxToRem($r_l)}"]',
+  xl:'[min-width~="#{pxToRem($r_xl)}"]',
+  xxl:'[min-width~="#{pxToRem($r_xxl)}"]',
 );
-
 
 
 @mixin respond-to($point) {
@@ -60,11 +60,15 @@ $js-b-points: (
   }
 }
 
-
 body {
   &:before {
     display: none;
     content: 'default';
+
+    @include respond-to(xs) {
+      content: 'xs';
+    }
+
     @include respond-to(s) {
       content: 's';
     }
@@ -85,8 +89,5 @@ body {
       content: 'xxl';
     }
 
-    @include respond-to(xxxl) {
-      content: 'xxxl';
-    }
   }
 }

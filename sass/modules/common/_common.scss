@@ -237,6 +237,10 @@ hr {
   float: right;
 }
 
+.align-center {
+  @include horizontal-center-margin
+}
+
 .clear {
   clear: both;
 }
@@ -397,5 +401,5 @@ ul, li {
 }
 
 .full-width {
-  width: 100%;
+      width: 100%;
 }
